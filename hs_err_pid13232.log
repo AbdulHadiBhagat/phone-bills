@@ -1,0 +1,33 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f1cf07c1231, pid=13232, tid=13247
+#
+# JRE version: OpenJDK Runtime Environment (13.0+33) (build 13+33)
+# Java VM: OpenJDK 64-Bit Server VM (13+33, mixed mode, sharing, tiered, compressed oops, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libjimage.so+0x4231]  ImageStrings::find(Endian*, char const*, int*, unsigned int)+0x71
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/libexec/abrt-hook-ccpp %s %c %p %u %g %t e %P %I %h" (or dumping to /home/abdulhadi/Desktop/AAFREEN/INTERNS/core-java-apps/copyWork/core.13232)
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:46346 -javaagent:/home/abdulhadi/sts-4.3.1.RELEASE/configuration/org.eclipse.osgi/238/0/.cp/lib/javaagent-shaded.jar -Dfile.encoding=UTF-8 copyWork.updated
+
+Host: Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz, 4 cores, 15G, CentOS Linux release 7.9.2009 (Core)
+Time: Tue Dec  1 11:39:05 2020 PKT elapsed time: 192 seconds (0d 0h 3m 12s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f1ce8228800):  JavaThread "Signal Dispatcher" daemon [_thread_in_vm, id=13247, stack(0x00007f1cb9eff000,0x00007f1cba000000)]
+
+Stack: [0x00007f1cb9eff000,0x00007f1cba000000],  sp=0x00007f1cb9ffd170,  free space=1016k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libjimage.so+0x4231]  ImageStrings::find(Endian*, char const*, int*, unsigned int)+0x71
+C  [libjimage.so+0x4d7a]  ImageFileReader::find_location_index(char const*, unsigned long long*) const+0x3a
+C  [libjimage.so+0x5291]  JIMAGE_FindResource+0xf1
+V  [libjvm.so+0x58f143]
